@@ -44,4 +44,4 @@ You create roles and then assign them to AWS resources
 
 ## Billing
 
-### Billing can be setup from within the Cloudwatch services (**ONLY** setup within N.Virgina) to reduce un-wanted expensesx
+### Billing can be setup from within the Cloud watch services (**ONLY** setup within N.Virgina) to reduce un-wanted expenses
