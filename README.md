@@ -1,50 +1,87 @@
-# Learning AWS 
-A repository for note taking while going through the course material
+# Certified Solutions Architect - Associate 2018
 
-Amazon Web Services, Solution Architect Associate (SAA) Basics:
+### I'm taking the above course on ACloudGuru and this repository is a general repository for the things I've learnt over the watching the online videos!
 
-* 130 minutes exam
-* Roughly 60 questions per exam (2 mins per question)
-* Multiple choice questions
-* Results 100-1000, pass mark 70%
-* Certs are valid for 2 years
+### Chapter 1
 
-SQS was the first service offered from AWS as cloud computing resource, in 2004. To later officially launch AWS in 2006. Within 1 year AWS gained 180,000 developers.
+#### Introduction to the Course
 
-By 2010 amazon.com moved over to AWS.
+~~Introduction~~
+~~Whaat you'll need getting started~~
+~~Exam blue print~~
 
-## High Level Services
+### Chapter 2
 
-* AWS Global Infrastructure
-* Compute, Storage, Databases
-* Migration & Transfer, Network & CDN, Developer Tools
-* Robotics, Blockchain, Satellite
-* Management & Governance	Media Services		Machine Learning
-* Analytics, Security & Identity Management, Mobile
-* AR & VR, Application Integration, AWS Cost Management
-* Customer Engagement, Business Applications, Desktop & App streaming
-* IOT, Game development
+#### AWS - 10,000 Foot overview
 
-## Global Infrastructure
+~~The history so far~~
+~~10,000 foot overview~~
+~~Setting up a free tier account~~
+~~AWS this week~~ 
 
-* **Regions** - A region is a geographical area, Eg. Ireland (eu-west-1) or Paris (eu-west-3) and will always contain two or more availability zones.
-* **Availability Zones** - Think of an availability zone as a data centers!
-* **Edge locations** -  are endpoints for AWS which are used for global caching of content. The services using Edge locations are Cloud front. There are many edge locations across the world.
+### Chapter 3
 
-## What do I need to know to pass the exam (services)?
+#### Identity Access Management (IAM)
 
-### Core
+~~IAM 101~~
+~~IAM Lab~~
+~~Creating a billing Alarm~~
+~~IAM Summary~~
+~~IAM Quiz~~ 95%
 
-* Security, Identity and Compliance
-* Network & Content Delivery
-* Storage
-* Databases
-* Compute
+### Chapter 4
 
-### Will be mentioned
+#### AWS Object Storage and CDN - S3, Glacier and CloudFront
 
-* Analytics
-* Desktop & App Streaming
-* Machine Learning
-* Management & Governance
-* Migration & Transfer
+~~S3 101~~
+~~Lab: Create an S3 Bucket~~
+~~Lab: S3 Version Control~~
+~~Cross Region Replication~~
+~~Lab: S3 Life Cycle Manager & Glacier~~
+~~CloudFront CDN Overview~~
+~~Create a CloudFront CDN~~
+~~S3 Security and Encryption~~
+~~Storage Gateway~~
+~~Snowball~~
+~~Snowball Lab~~
+S3 Transfer Acceleration
+Create a static website using S3
+Release Reviews
+Summary
+~~S3 Quiz~~
+
+### Chapter 5
+
+#### EC2 - The backbone of AWS
+
+### Chapter 6
+
+#### Route53
+
+### Chapter 7 
+
+#### Databases on AWS
+
+### Chapter 8
+
+#### VPC
+
+### Chapter 9
+
+#### Application Services
+
+### Chapter 10
+
+#### The Real World - Creating a fault tolerant Word Press Site
+
+### Chapter 11
+
+#### Whitepapers & The Well Architected Framework
+
+### Chapter 12
+
+#### Additional Exam Tips
+
+### Chapter 13
+
+#### Mini Quiz's 
