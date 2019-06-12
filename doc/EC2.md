@@ -40,3 +40,60 @@ Amazon EC2 is a web service that provides resizable compute capacity in the clou
 * Great for licensing which does not support multi-tenancy or cloud deployments
 * Can be purchased on-demand (hourly)
 * Purchased as a reservation for up to 70% off the on-demand price⁄plex
+
+### Different types of Virtualisation
+
+* PV - Paravirtualisation
+* HVM - Hardware virtual machine
+
+### Different types of Volume types
+
+* General purpose (GP2)
+* Disk intensive (IO1) - Improved IOPS
+* Magnetic
+
+### Encrypting a root partition
+
+By default, the root partition is NOT encrypted. To encrypt a root partition you must first create an instance then create an AMI from that instance, during the AMI creation process you then must select to encrypt the root volume.
+
+### EC2 Security Groups Basics
+
+What is a security group? A security group is like a virtual firewall. It's the first line of defense when protecting incoming and outbound traffic
+
+* All inbound traffic is blocked by default
+* All outbound traffic is Allowed by default
+* Changes to security groups take effect immediately
+* You can have any number of EC2 Instances within a security group
+* You can have multiple security groups attached to EC2 instances
+* Security groups are stateful
+  * If you create an inbound rule allowing traffic in, that traffic is automatically allowed back out again.
+* You cannot block specific IP addresses using Security Groups, instead use NACL
+* You can specify allow rules, but not deny rules. You can allow an IP over SSH but can't deny that same IP
+
+### EBS Volumes
+
+Elastic Block Storage - think of it as a virtual hard disk in the cloud, that can run Operating systems
+
+* EBS Volume has to be in the same availability zone as the instance
+* With the 4 differnt types of EBS volume all can be modified on the fly APART from standard type
+* Moving a volume to another availability zone
+  * Create a snapshot
+  * Then via the wizard you can create another volume based of the snapshot and moving it to another availability zone
+
+### Loadbalancers in AWS
+
+Three types of Loadbalancer within AWS
+
+* Application Loadbalancer - best suited for load balancing of HTTP and HTTPS traffic. Operate at layer 7 and are application aware.
+* Network load balancer - Best suited for load balancing of TCP traffic where extreme performance is required. Operates at layer 4 and are capable of handling millions of requests per second, while maintaining ultra-low latencies.
+* Classic Load balancer / elastic load balancer - Legacy load balancers, can balancer HTTTP/HTTPS traffic, can use layer 7 specific features and you can also load balancer layer 4. 
+
+### Load balancer errors
+
+* Classic Load Balancer - if your application (behind the LB) stops responding, the ELB will respond with a timeout error (504). Could be an issue with either the web server layer or the database layer.
+* X-Forwarded-For Header - because there is a load balancer infront of the ec2 instance the instance has no idea where the original IP address is. With X-Forwarded-For header the source public IP address is passed through to the EC2 instance. ELB allows the EC2 instance to grab the public IP[
+
+### Notes/Exam tips
+
+* Termination protection is turned off by default
+* EBS-backed instance default action is to be deleted when the instance is terminated
