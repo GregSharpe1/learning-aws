@@ -93,6 +93,37 @@ Three types of Loadbalancer within AWS
 * Classic Load Balancer - if your application (behind the LB) stops responding, the ELB will respond with a timeout error (504). Could be an issue with either the web server layer or the database layer.
 * X-Forwarded-For Header - because there is a load balancer infront of the ec2 instance the instance has no idea where the original IP address is. With X-Forwarded-For header the source public IP address is passed through to the EC2 instance. ELB allows the EC2 instance to grab the public IP[
 
+### Gathering EC2 metadata
+
+* From inside of the EC2 instance, curl http://169.254.169.254/latest/meta-data/ 
+* All metadata for that specific instance is within that endpoint
+
+### Placement Groups
+
+* Clustered placement group - group of instances within a SINGLE availability zone, placement groups are recommended for applications that need low network latency, high network throughput, or both. Only certain instances can be launched into a clustered Placement group. Defaulted to Cluster placement group within the exam.
+* Spread placement group - For ensuring that instances are spread across different hardware within different availability zones.
+
+#### Exam tips for placement groups
+
+* A *clustered* placement group, cannot span multiple availability zones.
+* A spread placement group can span across multiple regions/availability zones.
+* The name you specify for a placement group must be unique within your AWS account
+* Only certain types of instances can be launched in a placement group
+* It is advised that the instances used within these groups are homogenous, meaning that they should be the same size and type.
+* You can't merge placement groups.
+* You can't merge an existing ec2 instance into a placement group, you have to create an AMI from the running image.
+
+### EFS Lab
+
+* What is EFS? Amazon Elastic File storage is a file storage service for AWS EC2 instances. EFS is an easy to use and provides a simple interface that allows you to create and configure file systems. EFS storage capacity is elastic, growing and shrinking automatically as you add and remove files, so your applications have storage when they need it.
+* Supports the NFS version 4 protocol
+* Charged $0.30 per gb used of storage (no pre-provisioning required)
+* Can scale up to the petabytes
+* Can support thousands of concurrent NFS connections
+* Data is stored within multiple AZ's within a region
+* Read after write consistency (like S3)
+* Block based storage, not Object based storage
+
 ### Notes/Exam tips
 
 * Termination protection is turned off by default
