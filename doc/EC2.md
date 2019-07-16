@@ -128,3 +128,4 @@ Three types of Loadbalancer within AWS
 
 * Termination protection is turned off by default
 * EBS-backed instance default action is to be deleted when the instance is terminated
+* Two types of underlying Hypervisor technologies used by EC2 are Xen and Nitro
